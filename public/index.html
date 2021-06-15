@@ -4,14 +4,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link href="https://user-images.githubusercontent.com/28331870/68260721-c89c8d80-0078-11ea-8848-120759241054.png" rel="shortcut icon" />
+    <title>隐藏字符加密</title>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+    <script lang="ts">
+      function string() {
+        /* 
+        ██████╗  ██████╗ ██╗   ██╗███████╗██╗      █████╗ ███████╗████████╗
+        ██╔══██╗██╔═══██╗██║   ██║██╔════╝██║     ██╔══██╗██╔════╝╚══██╔══╝
+        ██████╔╝██║   ██║██║   ██║█████╗  ██║     ███████║███████╗   ██║   
+        ██╔══██╗██║   ██║╚██╗ ██╔╝██╔══╝  ██║     ██╔══██║╚════██║   ██║     @gmail.com
+        ██║  ██║╚██████╔╝ ╚████╔╝ ███████╗███████╗██║  ██║███████║   ██║   
+        ╚═╝  ╚═╝ ╚═════╝   ╚═══╝  ╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     
+                                                                          
+        */
+      };
+      let str = new String(string);
+      str = str.substring(str.indexOf("/*") + 3, str.lastIndexOf("*/"));
+      console.log(str);
+    </script>
   </body>
 </html>
