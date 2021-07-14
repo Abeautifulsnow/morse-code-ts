@@ -87,7 +87,7 @@
   import { encodeByUnicode, decodeByUnicode } from "../utils/unicodeEncrypt";
 
   function handleMethods() {
-    let params = reactive({
+    const params = reactive({
         msg: "encrypt",
         plaintext_before: "",
         plaintext_after: "",
@@ -97,13 +97,13 @@
         willDecode: "",
         outcodes: "",
     });
-    let handleSwitchChange = (e: any): void => {
+    const handleSwitchChange = (e: any): void => {
         const { id } = e.target;
         if (!!id) {
           params.encryptType = id;
         }
     };
-    let handleEncode = () => {
+    const handleEncode = () => {
       let code = "";
       if (params.encryptType === "morse") {
         let ch_Z = params.encodes.match(/[\u4e00-\u9fa5]+/g);
@@ -132,7 +132,7 @@
       }
       document.getElementById("string")!.innerHTML = code;
     };
-    let handleDecode = () => {
+    const handleDecode = () => {
       let outcodes = "";
       if (params.encryptType === "morse") {
         let code = decode(params.willDecode);
@@ -145,10 +145,10 @@
       }
       params.outcodes = outcodes;
     };
-    let copyCodes = () => {
+    const copyCodes = () => {
       copyToClipboard("string");
     };
-    let copyToClipboard = (elementId: string) => {
+    const copyToClipboard = (elementId: string) => {
       // 创建元素用于复制
       var aux = document.createElement("input");
       // 获取复制内容
@@ -186,7 +186,7 @@
 </script>
 
   <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style>
+  <style scoped>
 .page-title {
   position: relative;
   font-size: 18px;
